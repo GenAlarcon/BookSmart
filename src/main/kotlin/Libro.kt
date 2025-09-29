@@ -1,3 +1,5 @@
+package org.example
+
 open class Libro(
     val titulo: String,
     val autor: String,
@@ -10,7 +12,7 @@ open class Libro(
     }
 
     open fun descripcion(): String {
-        return "$titulo de $autor, Precio: $precioBase, Días: $diasPrestamo"
+        return "$titulo de $autor, Precio: $precioBase, Dias: $diasPrestamo"
     }
 
 }

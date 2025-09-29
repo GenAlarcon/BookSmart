@@ -1,3 +1,5 @@
+package org.example
+
 class LibroDigital(
     titulo: String,
     autor: String,
@@ -11,7 +13,8 @@ class LibroDigital(
     }
 
     override fun descripcion(): String {
-        val estadoDRM = if (drm) "Con DRM" else "Sin DRM"
-        return "$titulo de $autor, Precio: ${costoFinal()}, Días: $diasPrestamo, ($estadoDRM)"
+        val estadoDRM = if (drm) "Con DRM ⚫" else "Sin DRM"
+        val precioFormateado = "%.2f".format(costoFinal())
+        return "$titulo de $autor, Precio: $precioFormateado, Dias: $diasPrestamo, ($estadoDRM)"
     }
 }
